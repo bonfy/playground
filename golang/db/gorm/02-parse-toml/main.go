@@ -13,10 +13,10 @@ import (
 
 type tomlConfig struct {
 	Title    string
-	Database database
+	Database databaseConfig
 }
 
-type database struct {
+type databaseConfig struct {
 	Server   string
 	Port     int
 	Charset  string
@@ -31,7 +31,7 @@ type Product struct {
 	Price uint
 }
 
-func (u database) String() string {
+func (u databaseConfig) String() string {
 	return fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=%s&parseTime=True&loc=Local", u.Username, u.Password, u.Server, u.Port, u.Dbname, u.Charset)
 }
 
