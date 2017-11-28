@@ -1,0 +1,9 @@
+title = "config.toml"
+
+[database]
+server = "127.0.0.1"
+port = 3306
+charset = "utf8"
+db = "gorm_test"
+username = "root"
+password = ""
